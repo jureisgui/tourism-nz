@@ -1,0 +1,43 @@
+// $main_color: red;
+// $base_size:10px;
+
+// SCSS
+
+
+// FONTS
+@font-face {
+    font-family: 'PurePakati';
+    src: url(../fonts/PurePakati-Notch.otf)
+}
+
+@font-face {
+    font-family: 'National Regular';
+    src: url(../fonts/National-Regular.otf)
+}
+
+@font-face {
+    font-family: 'National Bold';
+    src: url(../fonts/National-Bold.ttf)
+}
+
+// LANDING SECTION
+.landing-section{
+    background-image: url('../images/background-landing.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+// header
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+}
+
+// .header-icons{
+
+// }
+
+// Accommodation search

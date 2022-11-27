@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "PurePakati";
+  src: url(../fonts/PurePakati-Notch.otf);
+}
+@font-face {
+  font-family: "National Regular";
+  src: url(../fonts/National-Regular.otf);
+}
+@font-face {
+  font-family: "National Bold";
+  src: url(../fonts/National-Bold.ttf);
+}
+.landing-section {
+  background-image: url("../images/background-landing.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+}/*# sourceMappingURL=style.css.map */
