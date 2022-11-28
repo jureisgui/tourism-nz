@@ -3,10 +3,30 @@
 
 // SCSS
 
+@mixin heading{
+    font-family: 'Pure Pakati', sans-serif;
+    font-size: 4em;
+    color: #FFFF;
+}
+
+@mixin sub-heading-light{
+    font-family: 'National Regular', serif;
+    font-size: 2.5em;
+    color: #FFFF;
+
+}
+
+@mixin sub-heading-dark{
+    font-family: 'National Regular', serif;
+    font-size: 2.5em;
+    color: #171717;
+    
+}
+
 
 // FONTS
 @font-face {
-    font-family: 'PurePakati';
+    font-family: 'Pure Pakati';
     src: url(../fonts/PurePakati-Notch.otf)
 }
 
@@ -29,15 +49,43 @@
 }
 
 // header
-
 header{
     display: flex;
     justify-content: space-between;
-    padding: 1em 2em;
+    align-items: center;
+    padding: 2em 3em;
+    // padding: clamp(1em, 50vw, 3em);
+} 
+
+.header-icons{
+    padding: 0.1em 0.5em;
+    background-color: #FFFF;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
 }
 
-// .header-icons{
-
-// }
+.header-icons img{
+    max-width: 35px;
+    max-height: 30px;
+    padding: 0.2em;;
+}
 
 // Accommodation search
+h1{
+    @include heading();
+}
+
+h2{
+    @include sub-heading-light();
+}
+
+.search-section{
+    text-align: center;    
+}
+
+.search-bar{
+    display: flex; 
+    justify-content: center;
+    align-items: flex-end;
+}
