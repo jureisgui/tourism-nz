@@ -102,6 +102,8 @@ h2{
 // ACCOMMODATION OPTIONS SECTION
 .accommodation-options{
     background-color: #171717;
+    padding: 2em;
+    // margin-bottom: 2em;
 }
 
 .accommodation-options h2{
@@ -111,9 +113,10 @@ h2{
 }
 
 // Accommodation Card
-.accommodation-container{
-    margin: auto;
-}
+
+// .accommodation-container{
+//     margin: 2em auto;
+// }
 
 .accommodation-card{
     background-color: #FFFF;
@@ -122,7 +125,6 @@ h2{
     display: flex;
     margin-bottom: 2em;
     max-width: 1000px;
-    padding-bottom: 1em;
 }
 
 .accomodation-info-container h2{
@@ -134,7 +136,7 @@ h2{
 
 .accommodation-card img{
     max-width: 400px;
-    max-height: 400px;
+    max-height: 300px;
     margin: 2em;
     border-radius: 4px;
 }
@@ -169,12 +171,14 @@ h2{
     font-size: 1.25em;
     padding: 0.5em;
     padding-right: 1em;
+    margin-bottom: 0;
     color: #474747;
 }
 
 .total-reserve-container{
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .price{
@@ -199,4 +203,20 @@ h2{
 .button{
     @include button();
     margin-right: 2em;
+    margin-bottom: 2em;
+}
+
+// FOOTER
+footer{
+    background-color: #474747;
+    display: flex;
+    justify-content: space-between;
+}
+
+h3{
+    color:#FFFF;
+    font-family: 'National Bold', serif;
+    font-size: 1.5em;
+
+
 }
