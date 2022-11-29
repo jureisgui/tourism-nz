@@ -25,7 +25,7 @@
 @mixin button{
     background-color: #41913C;
     border-radius: 4px;
-    padding: 1em 2em;
+    padding: 0.75em 2em;
     color: #FFFF;
     font-family: 'National Bold', serif;
 }
@@ -87,6 +87,8 @@ h1{
 h2{
     @include sub-heading-light();
     margin-top: 0;
+    max-width: 650px;
+    margin: auto;
 }
 
 .search-section{
@@ -97,13 +99,18 @@ h2{
     display: flex; 
     justify-content: center;
     align-items: flex-end;
+    background-color: #FFFF;
+    max-width: 600px;
+    border-radius: 4px;
+    padding: 1em;
+    margin: 1em auto;
 }
 
 // ACCOMMODATION OPTIONS SECTION
 .accommodation-options{
     background-color: #171717;
     padding: 2em;
-    // margin-bottom: 2em;
+    
 }
 
 .accommodation-options h2{
@@ -169,16 +176,16 @@ h2{
 .accommodation-text{
     font-family: 'National Regular', serif;
     font-size: 1.25em;
-    padding: 0.5em;
-    padding-right: 1em;
-    margin-bottom: 0;
+    padding: 1em;
+    padding-left: 0;
+    margin: 0;
     color: #474747;
 }
 
 .total-reserve-container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items:flex-start;
 }
 
 .price{
@@ -210,13 +217,40 @@ h2{
 footer{
     background-color: #474747;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 1em 4em;
 }
 
 h3{
     color:#FFFF;
     font-family: 'National Bold', serif;
     font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
 
+.media-icons{
+    display: flex;
+    align-items: center;
+}
 
+.media-icons img{
+    margin-right: 0.5em;;
+}
+
+.company-links a{
+    text-decoration: none;
+    color: #FFFF;
+    font-family: 'National Regular', serif;
+}
+
+.company-links p{
+    margin: 0;
+}
+
+.company-links{
+    padding-bottom: 1em;
+}
+
+.footer-logo{
+    margin-top: 2em;
 }
