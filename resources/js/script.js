@@ -1,3 +1,5 @@
+// flarpickr code for date picker calendar
+
 config = {
     altInput: true,
     altFormat: "F j, Y",
@@ -10,3 +12,5 @@ flatpickr("input[type=date]", config);
 // flatpickr({
 //     "plugins": [new rangePlugin({ input: "#secondRangeInput"})]
 // })
+
+// Filter accommodation options

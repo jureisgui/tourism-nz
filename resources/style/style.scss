@@ -49,10 +49,11 @@
 
 // LANDING SECTION
 .landing-section{
-    background-image: url('../images/background-landing.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(0, 0, 0, 0.192)), url('../images/background-landing.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    position: relative;
 }
 
 // header
@@ -84,7 +85,7 @@ h1{
     margin-bottom: 0;
 }
 
-h2{
+.search-section h2{
     @include sub-heading-light();
     margin-top: 0;
     max-width: 650px;
@@ -92,7 +93,14 @@ h2{
 }
 
 .search-section{
-    text-align: center;    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)    
+}
+
+.landing-text-wrapper{
+    text-align: center;
 }
 
 .search-bar{
@@ -103,27 +111,29 @@ h2{
     max-width: 600px;
     border-radius: 4px;
     padding: 1em;
-    margin: 1em auto;
+    margin: 1em auto; 
 }
 
 // ACCOMMODATION OPTIONS SECTION
 .accommodation-options{
     background-color: #171717;
     padding: 2em;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
 }
 
 .accommodation-options h2{
-    padding: 1em 1.5em;
-    margin-bottom: 0;
+    @include sub-heading-light();       
     // border-bottom: 3px #FFFF solid;
+}
+
+.accommodation-container{
+    margin: auto;
 }
 
 // Accommodation Card
 
-// .accommodation-container{
-//     margin: 2em auto;
-// }
 
 .accommodation-card{
     background-color: #FFFF;
