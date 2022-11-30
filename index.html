@@ -35,26 +35,27 @@
                 </div> -->
                 <div class="check-in">
                     <span>Check in</span> <br>
-                    <input type="date" id="check-in-input" placeholder="Add dates">
+                    <input type="date" id="check-in-date" placeholder="Add dates">
                 </div>
                 <div class="check-out">
                     <span>Check Out </span> <br>
-                    <input type="date" id="check-out-input" placeholder="Add dates">
+                    <input type="date" id="check-out-date" placeholder="Add dates">
                 </div>
                 <div class="number-guests">
                     <span>Guests</span> <br>
-                    <input type="number" placeholder="Add guests">
+                    <input type="number" id="quantity" min="1" max="15" placeholder="Add guests">
                 </div>
-                <img src="./resources/images/icons/search.svg" alt="Search icon">
+                <img id="search-btn" src="./resources/images/icons/search.svg" alt="Search icon">
             </div>
         </div>     
     </section>
 
-    <section class="accommodation-options">
+    <section class="accommodation-options no-display">
         <h2>Accommodation options for you</h2>
 
         <div class="accommodation-container">
-            <div class="accommodation-card hotel no-display">
+
+            <div class="accommodation-card no-display" id="hotel ">
                 <img src="./resources/images/hotel.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Hotel</h2>
@@ -85,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="accommodation-card hostel no-display">
+            <div class="accommodation-card no-display" id="hostel">
                 <img src="./resources/images/hostel.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Hostel</h2>
@@ -116,7 +117,7 @@
                 </div>
             </div>
 
-            <div class="accommodation-card motel no-display">
+            <div class="accommodation-card no-display" id="motel">
                 <img src="./resources/images/motel.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Motel</h2>
@@ -147,7 +148,7 @@
                 </div>
             </div>
 
-            <div class="accommodation-card house no-display">
+            <div class="accommodation-card no-display" id="house">
                 <img src="./resources/images/house.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>House</h2>
@@ -177,6 +178,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
