@@ -43,7 +43,7 @@
                 </div>
                 <div class="number-guests">
                     <span>Guests</span> <br>
-                    <input type="number" id="quantity" min="1" max="15" placeholder="Add guests">
+                    <input type="number" id="quantity" min="1" max="4" value="1">
                 </div>
                 <img id="search-btn" src="./resources/images/icons/search.svg" alt="Search icon">
             </div>
@@ -55,7 +55,7 @@
 
         <div class="accommodation-container">
 
-            <div class="accommodation-card no-display" id="hotel ">
+            <div class="accommodation-card no-display" id="hotel">
                 <img src="./resources/images/hotel.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Hotel</h2>
@@ -78,10 +78,10 @@
                     <p class="accommodation-text">Lorem ipsum dolor sit amet consectetur. Gravida et etiam ut accumsan enim commodo dis sed congue. Ut tempor nulla sollicitudin id nunc. Pharetra orci habitant ut volutpat est egestas sed. Tempor in risus nulla eu suspendisse mauris etiam cursus. Consequat vel et malesuada tortor at in. Viverra sit odio pharetra porta mi. </p>
                     <div class="total-reserve-container">
                         <div class="price">
-                            <p class="price-from-input">Total: NZD???</p>
+                            <p class="total-cost">Total: NZD???</p>
                             <span class="taxes">Includes taxes & fares</span>
                         </div>
-                        <span class="button">Reserve</span>
+                        <span class="reserve-button">Reserve</span>
                     </div>
                 </div>
             </div>
@@ -109,10 +109,10 @@
                     <p class="accommodation-text">Lorem ipsum dolor sit amet consectetur. In tellus id volutpat turpis ac. Ut tempor nulla sollicitudin id nunc. Pharetra orci habitant ut volutpat est egestas sed. Tempor in risus nulla eu suspendisse mauris etiam cursus.</p>
                     <div class="total-reserve-container">
                         <div class="price">
-                            <p class="price-from-input">Total: NZD???</p>
+                            <p class="total-cost">Total: NZD???</p>
                             <span class="taxes">Includes taxes & fares</span>
                         </div>
-                        <span class="button">Reserve</span>
+                        <span class="reserve-button">Reserve</span>
                     </div>
                 </div>
             </div>
@@ -140,10 +140,10 @@
                     <p class="accommodation-text">Lorem ipsum dolor sit amet consectetur. Gravida et etiam ut accumsan enim commodo dis sed congue. Tempor ultrices orci neque enim massa. In tellus id volutpat turpis ac. Ut tempor nulla sollicitudin id nunc. Pharetra orci habitant ut volutpat est egestas sed.</p>
                     <div class="total-reserve-container">
                         <div class="price">
-                            <p class="price-from-input">Total: NZD???</p>
+                            <p class="total-cost">Total: NZD???</p>
                             <span class="taxes">Includes taxes & fares</span>
                         </div>
-                        <span class="button">Reserve</span>
+                        <span class="reserve-button">Reserve</span>
                     </div>
                 </div>
             </div>
@@ -171,16 +171,59 @@
                     <p class="accommodation-text">Lorem ipsum dolor sit amet consectetur. Gravida et etiam ut accumsan enim commodo dis sed congue. Tempor ultrices orci neque enim massa. In tellus id volutpat turpis ac. Ut tempor nulla sollicitudin id nunc. Pharetra orci habitant ut volutpat est egestas sed. Tempor in risus nulla eu suspendisse mauris etiam cursus.</p>
                     <div class="total-reserve-container">
                         <div class="price">
-                            <p class="price-from-input">Total: NZD???</p>
+                            <p class="total-cost">Total: NZD???</p>
                             <span class="taxes">Includes taxes & fares</span>
                         </div>
-                        <span class="button">Reserve</span>
+                        <span class="reserve-button">Reserve</span>
                     </div>
                 </div>
             </div>
 
+            <div class="no-display" id="no-results">
+                <h2>No results found for your search...</h2>
+                <p>The accommodations we offer are between the following values:</p>
+                <div class="icons-info">
+                    <img src="./resources/images/icons/guests.svg" alt="People icon">
+                    <span>1 - 4</span>
+                </div>
+                <div class="icons-info">
+                    <img src="./resources/images/icons/nights.svg" alt="Moon icon indicating night">
+                    <span>1 - 15</span>
+                    <span>nights</span>
+                </div> 
+                <p>With this in mind, please try again.</p>  
+            </div>
         </div>
     </section>
+
+    <!-- MODAL start -->
+<section id="modal-reserve" class="modal-background">
+    <div class="booking-card">
+        <h2>Your booking</h2>
+        <div class="icons-info">
+            <img src="./resources/images/icons/guests.svg" alt="People icon">
+            <span class="guests-input"></span>
+        </div>
+        <div class="icons-info">
+            <img src="./resources/images/icons/nights.svg" alt="Moon icon indicating night">
+            <span class="nights-input"></span>
+        </div>
+        <div class="extras">
+            <p>Add extras:</p>
+            <label class="meal-container">
+                <input type="checkbox" checked="checked">Breakfast buffet - $20/day each
+            </label>
+            <br>
+            <label class="meal-container">
+                <input type="checkbox" checked="checked">Dinner buffet - $20/day each
+            </label>
+        </div>
+        <h2 id="modal-total-cost-display"></h2>
+    </div>
+    <div id="modal-bg" class="no-display"></div>
+</section>
+    <!-- MODAL end -->
+
 
     <footer>
         <div class="social-media">

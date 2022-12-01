@@ -220,7 +220,7 @@ h1{
     padding-left: 0.5em;
 }
 
-.price-from-input{
+.total-cost{
     font-family: 'National Bold', serif;
     font-size: 1.25em;
     color: #171717;
@@ -235,10 +235,28 @@ h1{
     padding: 0;
 }
 
-.button{
+.reserve-button{
     @include button();
     margin-right: 2em;
     margin-bottom: 2em;
+}
+
+// No results card
+#no-results{
+    background-color: #FFFF;
+    border-radius: 4px;
+    max-width: 500px;
+    padding: 2em;
+}
+
+#no-results h2{
+    @include sub-heading-dark();
+    margin: 0;
+}
+
+#no-results p{
+    font-family: 'National Regular', serif;
+    font-size: 1.25em;
 }
 
 // FOOTER
@@ -283,7 +301,23 @@ h3{
     margin-top: 2em;
 }
 
-// For filtered search
+// FOR FILTERED SEARCH
 .no-display{
     display: none;
+}
+
+// MODAL
+.modal-background{
+    background-color: #171717;
+}
+
+.booking-card{
+    background-color: #FFFF;
+    margin: auto;
+    padding: 4em;;
+}
+
+.extras{ 
+    font-family: 'Nationa Regular', serif;
+    font-size: 1.25em;
 }
