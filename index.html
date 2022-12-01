@@ -7,6 +7,10 @@
     <title>Tourism New Zealand | Accommodation</title>
     <link rel="stylesheet" href="./resources/style/style.css">
     <link rel="stylesheet" href="./resources/style/reset.css">
+    <!-- flatpickr -->
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <!-- date calculator by Utku Yalcin -->
+    <script src="./resources/js/date_calculator.js"></script>
 </head>
 
 <body>
@@ -20,35 +24,38 @@
             </div>       
         </header>
         <div class="search-section">
-            <h1>Accommodation</h1>
-            <h2>Find accommodation to suit every level of comfort and budget</h2>
-        </div>
-        <div class="search-bar">
-            <!-- <div>
-                <span>Location</span> <br>
-                <input type="text" placeholder="Which city do you prefer? ">
-            </div> -->
-            <div>
-                <span>Check in</span> <br>
-                <input type="date" placeholder="Add dates">
+            <div class="landing-text-wrapper">
+                <h1>Accommodation</h1>
+                <h2>Find accommodation to suit every level of comfort and budget</h2>
+            </div>        
+            <div class="search-bar">
+                <!-- <div>
+                    <span>Location</span> <br>
+                    <input type="text" placeholder="Which city do you prefer? ">
+                </div> -->
+                <div class="check-in">
+                    <span>Check in</span> <br>
+                    <input type="date" id="check-in-date" placeholder="Add dates">
+                </div>
+                <div class="check-out">
+                    <span>Check Out </span> <br>
+                    <input type="date" id="check-out-date" placeholder="Add dates">
+                </div>
+                <div class="number-guests">
+                    <span>Guests</span> <br>
+                    <input type="number" id="quantity" min="1" max="15" placeholder="Add guests">
+                </div>
+                <img id="search-btn" src="./resources/images/icons/search.svg" alt="Search icon">
             </div>
-            <div>
-                <span>Check Out </span> <br>
-                <input type="date" placeholder="Add dates">
-            </div>
-            <div>
-                <span>Guests</span> <br>
-                <input type="number" placeholder="Add guests">
-            </div>
-            <!-- <img src="./resources/images/icons/sea" alt=""> -->
         </div>     
     </section>
 
-    <section class="accommodation-options">
+    <section class="accommodation-options no-display">
         <h2>Accommodation options for you</h2>
 
         <div class="accommodation-container">
-            <div class="accommodation-card hotel no-display">
+
+            <div class="accommodation-card no-display" id="hotel ">
                 <img src="./resources/images/hotel.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Hotel</h2>
@@ -68,7 +75,7 @@
                             <span>per night</span>
                         </div>
                     </div>
-                    <p class="accommodation-text">Lorem ipsum dolor sit amet consectetur. Gravida et etiam ut accumsan enim commodo dis sed congue. Tempor ultrices orci neque enim massa. In tellus id volutpat turpis ac. Ut tempor nulla sollicitudin id nunc. Pharetra orci habitant ut volutpat est egestas sed. Tempor in risus nulla eu suspendisse mauris etiam cursus. Consequat vel et malesuada tortor at in. Viverra sit odio pharetra porta mi. </p>
+                    <p class="accommodation-text">Lorem ipsum dolor sit amet consectetur. Gravida et etiam ut accumsan enim commodo dis sed congue. Ut tempor nulla sollicitudin id nunc. Pharetra orci habitant ut volutpat est egestas sed. Tempor in risus nulla eu suspendisse mauris etiam cursus. Consequat vel et malesuada tortor at in. Viverra sit odio pharetra porta mi. </p>
                     <div class="total-reserve-container">
                         <div class="price">
                             <p class="price-from-input">Total: NZD???</p>
@@ -79,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="accommodation-card hostel no-display">
+            <div class="accommodation-card no-display" id="hostel">
                 <img src="./resources/images/hostel.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Hostel</h2>
@@ -110,7 +117,7 @@
                 </div>
             </div>
 
-            <div class="accommodation-card motel no-display">
+            <div class="accommodation-card no-display" id="motel">
                 <img src="./resources/images/motel.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Motel</h2>
@@ -141,7 +148,7 @@
                 </div>
             </div>
 
-            <div class="accommodation-card house no-display">
+            <div class="accommodation-card no-display" id="house">
                 <img src="./resources/images/house.jpg" alt="Photo of a hotel in NZ">
                 <div class="accomodation-info-container">
                     <h2>House</h2>
@@ -171,6 +178,7 @@
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -197,6 +205,12 @@
             <img src="./resources/images/footer-logo.svg" alt="">
         </div>
     </footer>
+
+    <!-- flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- main javascript -->
+    <script src="./resources/js/script.js"></script>
 
 </body>
 </html>
