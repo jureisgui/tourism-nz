@@ -4,23 +4,14 @@ config = {
     altInput: true,
     altFormat: "j F, Y",
     minDate: "today",
-    // maxDate: new Date().fp_incr(15) // 15 days from now
-}
+    // "plugins": [new rangePlugin({ input: "#secondRangeInput"})]
+    // onChange: [function(selectedDates){
+    //     const dateArr = selectedDates.map(date => this.formatDate(date, "Y-m-d"));
+    //     $('#check-in-date').val(dateArr[0]);
+    // }]
+};
 
 flatpickr("input[type=date]", config);
-
-// flatpickr({
-//     "plugins": [new rangePlugin({ input: "#secondRangeInput"})]
-// })
-
-// Burger menu
-const burger = document.querySelector('.burger');
-const nav = document.querySelector('.nav');
-
-burger.addEventListener('click', () => {
-    burger.classList.toggle('active')
-    nav.classList.toggle('active')
-})
 
 let accommodation_options = document.getElementsByClassName('accommodation-options')[0];
 let hotel_card = document.getElementById('hotel');
@@ -31,11 +22,12 @@ let quantity = document.getElementById('quantity');
 let no_result = document.getElementById('no-results')
 
 // Date difference calculation
+let difference; 
 
 document.getElementById('search-btn').onclick = function(){
     let date_one_val = document.getElementById('check-in-date').value;
     let date_two_val = document.getElementById('check-out-date').value;
-    let difference = calculate_day_difference(date_one_val,date_two_val);
+    difference = calculate_day_difference(date_one_val,date_two_val);
 
     // Filter accommodation options
     // hotel filtering
@@ -107,26 +99,65 @@ document.getElementById('search-btn').onclick = function(){
     if(!house_card.classList.contains('no-display')){
         house_total_cost.innerHTML = (difference*240);
     }
+
+    // transfer input to modal
+    let guest_input = document.getElementById('guest-input');
+    let date_input = document.getElementById('date-input');
+    guest_input.innerHTML = quantity.value;
+    date_input.innerHTML = difference;
+
 } 
 
 // Modal with meal options
-let guests = document.getElementsByClassName('guests-input')
-let dates = document.getElementsByClassName('nights-input')
-guests.innerHTML = quantity;
-
 let modal_popping = document.getElementsByClassName('button');
 let modal = document.getElementById('modal-reserve');
 let modal_bg = document.getElementById('modal-bg');
 
-for(let i = 0; i <= modal_popping.length; i++)
+console.log(modal_popping);
+for(let i = 0; i < modal_popping.length; i++)  
     modal_popping[i].onclick = turn_model_on;
+    
+let modal_total_cost;
+let modal_total = document.getElementById('modal-total-cost');
+    
 function turn_model_on(){
-    modal_display_toggle();   
+    modal_display_toggle(); 
+     // Recalculate total with meals added
+    modal_total.innerHTML = this.parentNode.children[0].children[0].children[0].innerHTML;
+    modal_total_cost = this.parentNode.children[0].children[0].children[0].innerHTML;       
+} // turn_modal_on function end
+
+let breakfast_checkbox = document.getElementById('breakfast');
+let dinner_checkbox = document.getElementById('dinner');
+breakfast_checkbox.onchange = meal_check;
+dinner_checkbox.onchange = meal_check;
+
+
+function meal_check(){
+    console.log( breakfast_checkbox.checked );
+
+    let breakfast_cost;
+    let dinner_cost;
+
+    if(breakfast_checkbox.checked)
+        breakfast_cost = 20*difference*quantity.value;
+    else
+        breakfast_cost = 0;
+
+    if(dinner_checkbox.checked)
+        dinner_cost = 20*difference*quantity.value;
+    else
+        dinner_cost = 0;
+        
+    modal_total.innerHTML = ~~modal_total_cost + breakfast_cost + dinner_cost;
 }
+
+
 function modal_display_toggle(){
     modal.classList.toggle('no-display');
-    modal_bg.classList.toggle('no-display');
+    // modal_bg.classList.toggle('no-display');
 }
+
 // modal_bg.onclick = modal_display_toggle;
 document.getElementById('modal-close-btn').onclick = modal_display_toggle;
 

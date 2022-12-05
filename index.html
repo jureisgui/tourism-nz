@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./resources/style/reset.css">
     <!-- flatpickr -->
     <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+    <script src="./resources/js/rangePlugin.js"></script>
     <!-- date calculator by Utku Yalcin -->
     <script src="./resources/js/date_calculator.js"></script>
 </head>
@@ -206,19 +207,19 @@
         <h2>Your booking</h2>
         <div class="modal-icons">
             <img src="./resources/images/icons/guests.svg" alt="People icon">
-            <span class="guests-input"></span>
+            <span id="guest-input"></span>
             <img src="./resources/images/icons/nights.svg" alt="Moon icon indicating night">
-            <span class="nights-input"></span>
+            <span id="date-input"></span>
         </div>
         <div class="extras">
             <p>Add extras:</p>
             <label class="meal-container">Breakfast buffet - $20/day each
-                <input type="checkbox" checked="checked">
+                <input type="checkbox" id="breakfast">
                 <span class="checkmark"></span>
             </label>
             <br>
             <label class="meal-container">Dinner buffet - $20/day each
-                <input type="checkbox" checked="checked">
+                <input type="checkbox" id="dinner">
                 <span class="checkmark"></span>
             </label>
         </div>
@@ -261,7 +262,7 @@
 
     <!-- flatpickr -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
+    
     <!-- main javascript -->
     <script src="./resources/js/script.js"></script>
 
