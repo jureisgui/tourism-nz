@@ -47,7 +47,7 @@ document.getElementById('search-btn').onclick = function(){
         hostel_card.classList.add('no-display');
     }
 
-    // hostel filtering
+    // motel filtering
     if (difference >= 3 && difference <= 10 && quantity.value >= 2 && quantity.value <= 4){
         accommodation_options.classList.remove('no-display');
         motel_card.classList.remove('no-display');
@@ -73,27 +73,49 @@ document.getElementById('search-btn').onclick = function(){
     else{
         no_result.classList.add('no-display');
     }
+
+    // calcutating total cost from user input
+    // hotel cost
+    let hotel_total_cost = document.getElementById('hotel-total-cost');    
+    if(!hotel_card.classList.contains('no-display')){
+        hotel_total_cost.innerHTML = (difference*157);
+    }
+
+    // hostel cost
+    let hostel_total_cost = document.getElementById('hostel-total-cost');    
+    if(!hostel_card.classList.contains('no-display')){
+        hostel_total_cost.innerHTML = (difference*30);
+    }
+
+    // motel cost
+    let motel_total_cost = document.getElementById('motel-total-cost');    
+    if(!motel_card.classList.contains('no-display')){
+        motel_total_cost.innerHTML = (difference*90);
+    }
+
+    // house cost
+    let house_total_cost = document.getElementById('house-total-cost');    
+    if(!house_card.classList.contains('no-display')){
+        house_total_cost.innerHTML = (difference*240);
+    }
 } 
 
 // Modal with meal options
+let modal_popping = document.getElementsByClassName('button');
+let modal = document.getElementById('modal-reserve');
+let modal_bg = document.getElementById('modal-bg');
 
-document.getElementsByClassName('reserve-button').onclick = function(){
-    
-
+for(let i = 0; i <= modal_popping.length; i++)
+    modal_popping[i].onclick = turn_model_on;
+function turn_model_on(){
+    modal_display_toggle();   
 }
-
-
-// Total accommodation value before meal options
-// let total_from_input = document.getElementsByClassName('total-from-input');
-
-// get difference of days 
-// get quantity of guests
-// calculate the total cost from these values
-
-
-// Total with the meal options
-
-
+function modal_display_toggle(){
+    modal.classList.toggle('no-display');
+    modal_bg.classList.toggle('no-display');
+}
+// modal_bg.onclick = modal_display_toggle;
+document.getElementById('modal-close-btn').onclick = modal_display_toggle;
 
 
 

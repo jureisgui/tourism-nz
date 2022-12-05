@@ -151,8 +151,6 @@ h1{
 }
 
 // Accommodation Card
-
-
 .accommodation-card{
     background-color: #FFFF;
     border-radius: 4px;
@@ -235,10 +233,11 @@ h1{
     padding: 0;
 }
 
-.reserve-button{
+.button{
     @include button();
     margin-right: 2em;
     margin-bottom: 2em;
+    cursor: pointer;
 }
 
 // No results card
@@ -307,17 +306,104 @@ h3{
 }
 
 // MODAL
-.modal-background{
+#modal-reserve{
     background-color: #171717;
+    position: fixed;
+    top: 10%; left: 10%;bottom: 10%;right: 10%;
+}
+
+#modal-bg{
+    background-color: rgba(0, 0, 0, 0.103);
+    position: fixed;
+    top: 0;bottom: 0;left: 0;right: 0;
+}
+
+.modal-top{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
 }
 
 .booking-card{
     background-color: #FFFF;
     margin: auto;
-    padding: 4em;;
+    padding: 4em;
 }
 
 .extras{ 
     font-family: 'Nationa Regular', serif;
     font-size: 1.25em;
+    margin-bottom: 2em;
+}
+
+.meal-container {
+    font-family: 'Nationa Regular', serif;
+    font-size: 1em;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .meal-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #47474750;
+    border-radius: 50px;
+  }
+
+  /* On mouse-over, add a grey background color */
+.meal-container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  /* When the checkbox is checked, add a black background */
+.meal-container input:checked ~ .checkmark {
+    background-color: #171717;
+  }
+
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+
+  /* Show the checkmark when checked */
+.meal-container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  /* Style the checkmark/indicator */
+.meal-container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);    
+  }
+
+  .booking-button{
+    @include button();
+    margin-right: 2em;
+    margin-bottom: 2em;
 }
