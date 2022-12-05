@@ -13,6 +13,15 @@ flatpickr("input[type=date]", config);
 //     "plugins": [new rangePlugin({ input: "#secondRangeInput"})]
 // })
 
+// Burger menu
+const burger = document.querySelector('.burger');
+const nav = document.querySelector('.nav');
+
+burger.addEventListener('click', () => {
+    burger.classList.toggle('active')
+    nav.classList.toggle('active')
+})
+
 let accommodation_options = document.getElementsByClassName('accommodation-options')[0];
 let hotel_card = document.getElementById('hotel');
 let hostel_card = document.getElementById('hostel');
@@ -101,6 +110,10 @@ document.getElementById('search-btn').onclick = function(){
 } 
 
 // Modal with meal options
+let guests = document.getElementsByClassName('guests-input')
+let dates = document.getElementsByClassName('nights-input')
+guests.innerHTML = quantity;
+
 let modal_popping = document.getElementsByClassName('button');
 let modal = document.getElementById('modal-reserve');
 let modal_bg = document.getElementById('modal-bg');
