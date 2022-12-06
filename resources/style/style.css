@@ -39,19 +39,23 @@ header {
   padding: 0.2em;
 }
 
+.header-logo {
+  max-width: clamp(180px, 50vw, 280px);
+}
+
 h1 {
   font-family: "Pure Pakati", sans-serif;
-  font-size: 4em;
+  font-size: clamp(2.5em, 10vw, 4em);
   color: white;
   margin-bottom: 0;
 }
 
 .search-section h2 {
   font-family: "National Bold", serif;
-  font-size: 2.5em;
+  font-size: clamp(1.5em, 5vw, 2.5em);
   color: white;
   margin-top: 0;
-  max-width: 650px;
+  max-width: clamp(250px, 80vw, 650px);
   margin: auto;
 }
 
@@ -71,7 +75,7 @@ h1 {
   justify-content: space-between;
   align-items: flex-end;
   background-color: white;
-  max-width: 600px;
+  max-width: clamp(200px, 80vw, 600px);
   border-radius: 10px;
   padding: 1em;
   margin: 1em auto;
@@ -93,11 +97,12 @@ h1 {
 #search-btn {
   padding: 0 1em;
   max-width: 40px;
+  cursor: pointer;
 }
 
 .accommodation-options {
   background-color: #171717;
-  padding: 2em;
+  padding: clamp(0.5em, 0vw, 2em);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -105,7 +110,7 @@ h1 {
 
 .accommodation-options h2 {
   font-family: "National Bold", serif;
-  font-size: 2.5em;
+  font-size: clamp(1.5em, 5vw, 2.5em);
   color: white;
 }
 
@@ -124,7 +129,7 @@ h1 {
 
 .accomodation-info-container h2 {
   font-family: "National Bold", serif;
-  font-size: 2.5em;
+  font-size: clamp(1.5em, 5vw, 2.5em);
   color: #171717;
   margin: 0;
   padding: 0;
@@ -165,7 +170,7 @@ h1 {
 
 .accommodation-text {
   font-family: "National Regular", serif;
-  font-size: 1.25em;
+  font-size: clamp(1em, 5vw, 1.25em);
   padding: 1em;
   padding-left: 0;
   margin: 0;
@@ -217,7 +222,7 @@ h1 {
 
 #no-results h2 {
   font-family: "National Bold", serif;
-  font-size: 2.5em;
+  font-size: clamp(1.5em, 5vw, 2.5em);
   color: #171717;
   margin: 0;
 }
@@ -380,4 +385,51 @@ h3 {
   font-family: "National Bold", serif;
   margin-right: 2em;
   margin-bottom: 2em;
+}
+
+@media screen and (max-width: 995px) {
+  .accommodation-card {
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(0.5em, 50vw, 1em);
+    margin: clamp(0.1em, 50vw, 1em);
+    max-width: clamp(200px, 50vw, 570px);
+    text-align: center;
+  }
+  .accommodation-card img {
+    max-width: clamp(200px, 50vw, 400px);
+    margin-bottom: 0;
+  }
+  .accomodation-info-container {
+    padding: 0 0.5em 0.5em 0.5em;
+  }
+  .icons-info {
+    margin: 0.2em auto;
+  }
+  .accommodation-icons-container {
+    flex-wrap: wrap;
+  }
+  .total-reserve-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .button {
+    margin: 0.5em 0;
+  }
+}
+@media screen and (max-width: 740px) {
+  .search-bar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-bar * {
+    margin-bottom: 0.5em;
+  }
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */

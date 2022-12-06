@@ -1,24 +1,21 @@
-// $main_color: red;
-// $base_size:10px;
-
 // SCSS
 
 @mixin heading{
     font-family: 'Pure Pakati', sans-serif;
-    font-size: 4em;
+    font-size: clamp(2.5em, 10vw, 4em);
     color: #FFFF;
 }
 
 @mixin sub-heading-light{
     font-family: 'National Bold', serif;
-    font-size: 2.5em;
+    font-size: clamp(1.5em, 5vw, 2.5em);
     color: #FFFF;
 
 }
 
 @mixin sub-heading-dark{
     font-family: 'National Bold', serif;
-    font-size: 2.5em;
+    font-size: clamp(1.5em, 5vw, 2.5em);
     color: #171717; 
 }
 
@@ -29,7 +26,6 @@
     color: #FFFF;
     font-family: 'National Bold', serif;
 }
-
 
 // FONTS
 @font-face {
@@ -62,7 +58,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 2em 3em;
-    // padding: clamp(1em, 50vw, 3em);
+    // padding: clamp(1em, 80vw, 3em);
 } 
 
 .header-icons{
@@ -79,17 +75,22 @@ header{
     padding: 0.2em;;
 }
 
+.header-logo{
+    max-width: clamp(180px, 50vw, 280px);
+}
+
 // Accommodation search
+
 h1{
     @include heading();
-    margin-bottom: 0;
+    margin-bottom: 0;   
 }
 
 .search-section h2{
     @include sub-heading-light();
     margin-top: 0;
-    max-width: 650px;
-    margin: auto;
+    max-width: clamp(250px, 80vw, 650px);
+    margin: auto;   
 }
 
 .search-section{
@@ -108,7 +109,7 @@ h1{
     justify-content: space-between;
     align-items: flex-end;
     background-color: #FFFF;
-    max-width: 600px;
+    max-width: clamp(200px, 80vw,600px);
     border-radius: 10px;
     padding: 1em;
     margin: 1em auto; 
@@ -123,19 +124,19 @@ h1{
     font-family: 'National Regular', serif;
     padding: 0.5em;
     margin-right: 0.3em;
-    border-radius: 4px;
-    
+    border-radius: 4px; 
 }
 
 #search-btn{
     padding:  0 1em;
     max-width: 40px;
+    cursor: pointer;
 }
 
 // ACCOMMODATION OPTIONS SECTION
 .accommodation-options{
     background-color: #171717;
-    padding: 2em;
+    padding: clamp(0.5em, 0vw, 2em);
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -201,7 +202,7 @@ h1{
 
 .accommodation-text{
     font-family: 'National Regular', serif;
-    font-size: 1.25em;
+    font-size: clamp(1em, 5vw, 1.25em);
     padding: 1em;
     padding-left: 0;
     margin: 0;
@@ -407,3 +408,64 @@ h3{
     margin-right: 2em;
     margin-bottom: 2em;
 }
+
+// RESPONSIVE
+@media screen and (max-width: 995px){
+    .accommodation-card{
+        flex-direction: column;
+        align-items: center;
+        padding: clamp(0.5em, 50vw, 1em);
+        margin: clamp(0.1em, 50vw, 1em);
+        max-width: clamp(200px, 50vw, 570px);
+        text-align: center;  
+    }
+
+    .accommodation-card img{
+        max-width: clamp(200px, 50vw, 400px);
+        margin-bottom: 0;
+    }
+
+    .accomodation-info-container{
+        padding: 0 0.5em 0.5em 0.5em;
+    }
+
+    .icons-info{
+        margin: 0.2em auto;
+  
+    }
+
+    .accommodation-icons-container{
+        flex-wrap: wrap;
+    }
+
+    .total-reserve-container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .button{
+        margin: 0.5em 0;
+    }
+
+}
+
+@media screen and (max-width: 740px){
+    .search-bar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .search-bar *{
+        margin-bottom: 0.5em;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+}
+

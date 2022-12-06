@@ -105,7 +105,6 @@ document.getElementById('search-btn').onclick = function(){
     let date_input = document.getElementById('date-input');
     guest_input.innerHTML = quantity.value;
     date_input.innerHTML = difference;
-
 } 
 
 // Modal with meal options
@@ -122,7 +121,7 @@ let modal_total = document.getElementById('modal-total-cost');
     
 function turn_model_on(){
     modal_display_toggle(); 
-     // Recalculate total with meals added
+     // reaching the cost calculated from user input (done above)
     modal_total.innerHTML = this.parentNode.children[0].children[0].children[0].innerHTML;
     modal_total_cost = this.parentNode.children[0].children[0].children[0].innerHTML;       
 } // turn_modal_on function end
@@ -132,7 +131,7 @@ let dinner_checkbox = document.getElementById('dinner');
 breakfast_checkbox.onchange = meal_check;
 dinner_checkbox.onchange = meal_check;
 
-
+// Recalculate total with meals added
 function meal_check(){
     console.log( breakfast_checkbox.checked );
 
@@ -151,7 +150,6 @@ function meal_check(){
         
     modal_total.innerHTML = ~~modal_total_cost + breakfast_cost + dinner_cost;
 }
-
 
 function modal_display_toggle(){
     modal.classList.toggle('no-display');
