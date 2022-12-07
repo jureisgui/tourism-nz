@@ -19,14 +19,13 @@
     <section class="landing-section">
         <header>
             <a href="index.html"><img class="header-logo" src="./resources/images/header-logo.svg" alt="100% Pure New Zealand logo"></a>
-            <div class="header-icons">
+            <!-- <div class="header-icons">
                 <img id="burger" src="./resources/images/icons/menu.svg" alt="Icon for menu options">
                 <img src="./resources/images/icons/user-account.svg" alt="Icon for user account">
             </div>
-            <nav class="nav no-display">
-                
+            <nav class="nav no-display">                
 
-            </nav>       
+            </nav>        -->
         </header>
         <div class="search-section">
             <div class="landing-text-wrapper">
@@ -88,7 +87,7 @@
             </div>
 
             <div class="accommodation-card no-display" id="hostel">
-                <img src="./resources/images/hostel.jpg" alt="Photo of a hotel in NZ">
+                <img src="./resources/images/hostel.jpg" alt="Photo of a hostel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Hostel</h2>
                     <div class="accommodation-icons-container">
@@ -119,7 +118,7 @@
             </div>
 
             <div class="accommodation-card no-display" id="motel">
-                <img src="./resources/images/motel.jpg" alt="Photo of a hotel in NZ">
+                <img src="./resources/images/motel.jpg" alt="Photo of a motel in NZ">
                 <div class="accomodation-info-container">
                     <h2>Motel</h2>
                     <div class="accommodation-icons-container">
@@ -150,7 +149,7 @@
             </div>
 
             <div class="accommodation-card no-display" id="house">
-                <img src="./resources/images/house.jpg" alt="Photo of a hotel in NZ">
+                <img src="./resources/images/house.jpg" alt="Photo of a house in NZ">
                 <div class="accomodation-info-container">
                     <h2>House</h2>
                     <div class="accommodation-icons-container">
@@ -199,40 +198,43 @@
     </section>
 
     <!-- MODAL start -->
-<section id="modal-reserve" class="no-display">
-    <div class="modal-top">
-        <span id="modal-close-btn"><img src="./resources/images/icons/exit.svg" alt="Exit icon"></span>
-    </div>
-    <div class="booking-card">
-        <h2>Your booking</h2>
-        <div class="modal-icons">
-            <img src="./resources/images/icons/guests.svg" alt="People icon">
-            <span id="guest-input"></span>
-            <img src="./resources/images/icons/nights.svg" alt="Moon icon indicating night">
-            <span id="date-input"></span>
+    <section id="modal-reserve" class="no-display">
+        <div class="modal-top">
+            <span id="modal-close-btn"><img src="./resources/images/icons/exit.svg" alt="Exit icon"></span>
         </div>
-        <div class="extras">
-            <p>Add extras:</p>
-            <label class="meal-container">Breakfast buffet - $20/day each
-                <input type="checkbox" id="breakfast">
-                <span class="checkmark"></span>
-            </label>
-            <br>
-            <label class="meal-container">Dinner buffet - $20/day each
-                <input type="checkbox" id="dinner">
-                <span class="checkmark"></span>
-            </label>
+        <div class="booking-card">
+            <img src="./resources/images/travel-suitcase.jpg" alt="Person with a suitcase walking">
+            <div class="accomodation-info-container">
+                <h2>Your booking</h2>
+                <div class="modal-icons">
+                    <img src="./resources/images/icons/guests.svg" alt="People icon">
+                    <span id="guest-input"></span>
+                    <img src="./resources/images/icons/nights.svg" alt="Moon icon indicating night">
+                    <span id="date-input"></span>
+                </div>
+                <div class="extras">
+                    <p>Add extras:</p>
+                    <label class="meal-container">Breakfast buffet - $20 per day, per guest 
+                        <input type="checkbox" id="breakfast">
+                        <span class="checkmark"></span>
+                    </label>
+                    <br>
+                    <label class="meal-container">Dinner buffet - $20 per day, per guest
+                        <input type="checkbox" id="dinner">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <div class="total-reserve-container">
+                    <div>
+                        <p class="total-cost">Total: NZD<span id="modal-total-cost"></span></p>
+                        <span class="taxes">Includes taxes & fares</span>  
+                    </div>      
+                    <a href="booking.html"><span class="booking-button">Book</span></a>
+                </div>
+            </div>        
         </div>
-        <div class="total-reserve-container">
-            <div>
-                <p class="total-cost">Total: NZD<span id="modal-total-cost"></span></p>
-                <span class="taxes">Includes taxes & fares</span>  
-            </div>      
-            <span class="booking-button">Book</span>
-        </div>        
-    </div>
-</section>
-<!-- <div id="modal-bg" class="no-display"></div> -->
+    </section>
+    <!-- <div id="modal-bg" class="no-display"></div> -->
     <!-- MODAL end -->
 
 
