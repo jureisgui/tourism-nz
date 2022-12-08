@@ -144,7 +144,7 @@ h1{
 // ACCOMMODATION OPTIONS SECTION
 .accommodation-options{
     background-color: #171717;
-    padding: clamp(0.5em, 0vw, 2em);
+    padding: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -325,12 +325,6 @@ h3{
     top: 10%; left: 8%;bottom: 10%;right: 8%;
 }
 
-#modal-bg{
-    background-color: rgba(0, 0, 0, 0.103);
-    position: fixed;
-    top: 0;bottom: 0;left: 0;right: 0;
-}
-
 .modal-top{
     display: flex;
     justify-content: flex-end;
@@ -347,7 +341,9 @@ h3{
     padding: 2em;
     border-radius: 4px;
     display: flex;
-    max-width: 1000px;
+    max-width: 900px;
+    align-items: center;
+    margin: auto;
 }
 
 .booking-card img{
@@ -459,12 +455,13 @@ h3{
 
 // RESPONSIVENESS
 @media screen and (max-width: 995px){
+
     .accommodation-card{
         flex-direction: column;
         align-items: center;
         padding: clamp(0.5em, 50vw, 1em);
-        margin: clamp(0.1em, 50vw, 1em);
-        max-width: clamp(200px, 50vw, 570px);
+        margin: clamp(auto, 150vw, 1em);
+        max-width: clamp(200px, 150vw, 570px);
         text-align: center;  
     }
 
@@ -502,8 +499,17 @@ h3{
     .search-bar{
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: stretch;
+        max-width: 200px;
+
     }
+    .search-bar input{
+        width: 80%; 
+    }
+
+   #search-btn{
+    margin: auto;
+   }
 
     .search-bar *{
         margin-bottom: 0.5em;

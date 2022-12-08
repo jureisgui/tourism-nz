@@ -67,7 +67,7 @@ document.getElementById('search-btn').onclick = function(){
     }
 
     // no results filtering
-    if(difference > 15 || quantity.value > 4){
+    if(difference <= 0 || difference > 15 || quantity.value > 4 || difference == 1 && quantity.value >= 3){
         accommodation_options.classList.remove('no-display');
         no_result.classList.remove('no-display');
     }
@@ -153,10 +153,8 @@ function meal_check(){
 
 function modal_display_toggle(){
     modal.classList.toggle('no-display');
-    // modal_bg.classList.toggle('no-display');
 }
 
-// modal_bg.onclick = modal_display_toggle;
 document.getElementById('modal-close-btn').onclick = modal_display_toggle;
 
 
