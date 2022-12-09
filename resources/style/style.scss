@@ -142,7 +142,7 @@ h1{
 // ACCOMMODATION OPTIONS SECTION
 .accommodation-options{
     background-color: #171717;
-    padding: 1em;
+    padding: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;    
@@ -317,13 +317,11 @@ h3{
 
 // MODAL
 #modal-reserve{
-    background-color: #474747;
+    background-color: #171717;
     position: fixed;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    display: flex;
-    flex-direction: row;
 }
 
 .modal-top{
@@ -460,9 +458,8 @@ h3{
     .accommodation-card{
         flex-direction: column;
         align-items: center;
-        padding: 0;
-        margin: auto;
-        margin-bottom: 0.5em;
+        padding: clamp(0.5em, 50vw, 1em);
+        margin: clamp(auto, 150vw, 1em);
         max-width: clamp(200px, 150vw, 570px);
         text-align: center;  
     }
@@ -497,8 +494,6 @@ h3{
 
     .booking-card{
         flex-direction: column;
-        max-height: 420px; 
-        overflow-y: auto; 
     }
 }
 
