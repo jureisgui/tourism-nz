@@ -4,11 +4,6 @@ config = {
     altInput: true,
     altFormat: "j F, Y",
     minDate: "today",
-    // "plugins": [new rangePlugin({ input: "#secondRangeInput"})]
-    // onChange: [function(selectedDates){
-    //     const dateArr = selectedDates.map(date => this.formatDate(date, "Y-m-d"));
-    //     $('#check-in-date').val(dateArr[0]);
-    // }]
 };
 
 flatpickr("input[type=date]", config);

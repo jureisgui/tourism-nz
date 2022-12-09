@@ -322,7 +322,7 @@ h3{
 #modal-reserve{
     background-color: #171717;
     position: fixed;
-    top: 10%; left: 8%;bottom: 10%;right: 8%;
+    // top: 10%; left: 8%;bottom: 10%;right: 8%;
 }
 
 .modal-top{
@@ -337,7 +337,6 @@ h3{
 
 .booking-card{
     background-color: #FFFF;
-    margin: 4em;
     padding: 2em;
     border-radius: 4px;
     display: flex;
@@ -493,6 +492,10 @@ h3{
         margin: 0.5em 0;
     }
 
+    .booking-card{
+        flex-direction: column;
+    }
+
 }
 
 @media screen and (max-width: 740px){
@@ -519,10 +522,6 @@ h3{
         flex-direction: column;
         align-items: center;
         text-align: center;
-    }
-
-    .booking-card{
-        flex-direction: column;
     }
 
 }
