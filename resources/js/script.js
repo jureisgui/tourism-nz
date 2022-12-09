@@ -14,7 +14,7 @@ let hostel_card = document.getElementById('hostel');
 let motel_card = document.getElementById('motel');
 let house_card = document.getElementById('house');
 let quantity = document.getElementById('quantity');
-let no_result = document.getElementById('no-results')
+let no_result = document.getElementById('no-results');
 
 // Date difference calculation
 let difference; 
@@ -100,12 +100,11 @@ document.getElementById('search-btn').onclick = function(){
     let date_input = document.getElementById('date-input');
     guest_input.innerHTML = quantity.value;
     date_input.innerHTML = difference;
-} 
+}; 
 
 // Modal with meal options
 let modal_popping = document.getElementsByClassName('button');
 let modal = document.getElementById('modal-reserve');
-let modal_bg = document.getElementById('modal-bg');
 
 console.log(modal_popping);
 for(let i = 0; i < modal_popping.length; i++)  

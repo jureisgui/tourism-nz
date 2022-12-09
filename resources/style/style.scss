@@ -1,5 +1,4 @@
 // SCSS
-
 @mixin heading{
     font-family: 'Pure Pakati', sans-serif;
     font-size: clamp(2.5em, 10vw, 4em);
@@ -59,7 +58,6 @@ header{
     align-items: center;
     flex-wrap: wrap;
     padding: 2em 3em;
-    // padding: clamp(1em, 80vw, 3em);
 } 
 
 .header-icons{
@@ -84,7 +82,6 @@ header{
 }
 
 // Accommodation search
-
 h1{
     @include heading();
     margin-bottom: 0;   
@@ -118,6 +115,7 @@ h1{
     padding: 1em;
     margin: 1em auto; 
 }
+
 .search-bar span{
     font-family: 'National Regular', serif;
     font-size: 1em;
@@ -152,7 +150,6 @@ h1{
 
 .accommodation-options h2{
     @include sub-heading-light();       
-    // border-bottom: 3px #FFFF solid;
 }
 
 .accommodation-container{
@@ -322,7 +319,10 @@ h3{
 #modal-reserve{
     background-color: #171717;
     position: fixed;
-    // top: 10%; left: 8%;bottom: 10%;right: 8%;
+    top: 10%; 
+    left: 10%;
+    bottom: 10%;
+    right: 10%;
 }
 
 .modal-top{
@@ -339,9 +339,10 @@ h3{
     background-color: #FFFF;
     padding: 2em;
     border-radius: 4px;
-    display: flex;
     max-width: 900px;
+    display: flex;
     align-items: center;
+    justify-content: center;
     margin: auto;
 }
 
@@ -453,6 +454,12 @@ h3{
 }
 
 // RESPONSIVENESS
+@media screen and (max-width: 1020px){
+
+    .booking-card{
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 995px){
 
     .accommodation-card{
@@ -491,11 +498,6 @@ h3{
     .button{
         margin: 0.5em 0;
     }
-
-    .booking-card{
-        flex-direction: column;
-    }
-
 }
 
 @media screen and (max-width: 740px){
