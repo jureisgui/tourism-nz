@@ -109,7 +109,7 @@ h1 {
 
 .accommodation-options {
   background-color: #171717;
-  padding: 1em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -429,14 +429,8 @@ h3 {
   .accommodation-card {
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
     padding: clamp(0.5em, 50vw, 1em);
     margin: clamp(auto, 150vw, 1em);
-=======
-    padding: 0;
-    margin: 0;
-    margin-bottom: 0.5em;
->>>>>>> parent of f485858 (final)
     max-width: clamp(200px, 150vw, 570px);
     text-align: center;
   }
