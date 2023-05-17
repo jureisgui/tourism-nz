@@ -109,7 +109,7 @@ h1 {
 
 .accommodation-options {
   background-color: #171717;
-  padding: 2em;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -353,6 +353,7 @@ h3 {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -429,8 +430,9 @@ h3 {
   .accommodation-card {
     flex-direction: column;
     align-items: center;
-    padding: clamp(0.5em, 50vw, 1em);
-    margin: clamp(auto, 150vw, 1em);
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.5em;
     max-width: clamp(200px, 150vw, 570px);
     text-align: center;
   }
