@@ -70,6 +70,12 @@ document.getElementById('search-btn').onclick = function(){
         no_result.classList.add('no-display');
     }
 
+    // Scroll to the results section
+    window.scrollTo({
+        top: accommodation_options.offsetTop,
+        behavior: 'smooth'
+    });
+
     // calcutating total cost from user input
     // hotel cost
     let hotel_total_cost = document.getElementById('hotel-total-cost');    
@@ -106,14 +112,15 @@ document.getElementById('search-btn').onclick = function(){
 let modal_popping = document.getElementsByClassName('button');
 let modal = document.getElementById('modal-reserve');
 
+// Add event listener to each button / modal function starts
 console.log(modal_popping);
 for(let i = 0; i < modal_popping.length; i++)  
-    modal_popping[i].onclick = turn_model_on;
+    modal_popping[i].onclick = turn_modal_on;
     
 let modal_total_cost;
 let modal_total = document.getElementById('modal-total-cost');
     
-function turn_model_on(){
+function turn_modal_on(){
     modal_display_toggle(); 
      // reaching the cost calculated from user input (done above)
     modal_total.innerHTML = this.parentNode.children[0].children[0].children[0].innerHTML;
@@ -150,11 +157,3 @@ function modal_display_toggle(){
 }
 
 document.getElementById('modal-close-btn').onclick = modal_display_toggle;
-
-
-
-
-
-
-
-    
