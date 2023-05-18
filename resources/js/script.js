@@ -70,6 +70,12 @@ document.getElementById('search-btn').onclick = function(){
         no_result.classList.add('no-display');
     }
 
+    // Scroll to the results section
+    window.scrollTo({
+        top: accommodation_options.offsetTop,
+        behavior: 'smooth'
+    });
+
     // calcutating total cost from user input
     // hotel cost
     let hotel_total_cost = document.getElementById('hotel-total-cost');    
