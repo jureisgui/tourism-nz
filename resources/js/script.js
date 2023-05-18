@@ -75,6 +75,12 @@ document.getElementById('search-btn').onclick = function(){
         no_result.classList.add('no-display');
     }
 
+    // Scroll to the results section
+    window.scrollTo({
+        top: accommodation_options.offsetTop,
+        behavior: 'smooth'
+    });
+
     // calcutating total cost from user input
     // hotel cost
     let hotel_total_cost = document.getElementById('hotel-total-cost');    
@@ -155,10 +161,8 @@ function meal_check(){
 
 function modal_display_toggle(){
     modal.classList.toggle('no-display');
-    // modal_bg.classList.toggle('no-display');
 }
 
-// modal_bg.onclick = modal_display_toggle;
 document.getElementById('modal-close-btn').onclick = modal_display_toggle;
 
 

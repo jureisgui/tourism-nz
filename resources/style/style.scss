@@ -307,15 +307,9 @@ h3{
 
 // MODAL
 #modal-reserve{
-    background-color: #171717;
+    background-color: #171717de;
     position: fixed;
     top: 10%; left: 10%;bottom: 10%;right: 10%;
-}
-
-#modal-bg{
-    background-color: rgba(0, 0, 0, 0.103);
-    position: fixed;
-    top: 0;bottom: 0;left: 0;right: 0;
 }
 
 .modal-top{
@@ -328,6 +322,8 @@ h3{
     background-color: #FFFF;
     margin: auto;
     padding: 4em;
+    max-width: fit-content;
+ 
 }
 
 .extras{ 

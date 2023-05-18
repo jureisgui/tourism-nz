@@ -273,21 +273,12 @@ h3 {
 }
 
 #modal-reserve {
-  background-color: #171717;
+  background-color: rgba(23, 23, 23, 0.8705882353);
   position: fixed;
   top: 10%;
   left: 10%;
   bottom: 10%;
   right: 10%;
-}
-
-#modal-bg {
-  background-color: rgba(0, 0, 0, 0.103);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .modal-top {
@@ -300,6 +291,8 @@ h3 {
   background-color: white;
   margin: auto;
   padding: 4em;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 .extras {
@@ -317,7 +310,6 @@ h3 {
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
 }
 
