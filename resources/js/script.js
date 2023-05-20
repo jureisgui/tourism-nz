@@ -126,6 +126,7 @@ function turn_model_on(){
     modal_total_cost = this.parentNode.children[0].children[0].children[0].innerHTML;       
 } // turn_modal_on function end
 
+// checkbox for extras (meal options)
 let breakfast_checkbox = document.getElementById('breakfast');
 let dinner_checkbox = document.getElementById('dinner');
 breakfast_checkbox.onchange = meal_check;
